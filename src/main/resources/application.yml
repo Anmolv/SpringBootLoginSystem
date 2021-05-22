@@ -1,0 +1,31 @@
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+
+  port: 8081
+
+spring:
+  datasource:
+    password: admin@123
+    url: jdbc:postgresql://localhost:5432/registration
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: 'create-drop'
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username:
+    password:
+    protocol: smtp
+    tls: true
+    properties.mail.smtp:
+        auth: true
+        starttls.enable: true
+        ssl.trust: smtp.gmail.com
